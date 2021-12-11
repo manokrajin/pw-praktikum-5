@@ -18,4 +18,13 @@ class DeviceController extends BaseController
 
         return view('page1', $data);
     }
+
+    public function save()
+    {
+        $this->request->getVar();
+    }
+
+    public function edit()
+    {
+    }
 }
