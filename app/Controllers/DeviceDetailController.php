@@ -2,10 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\DeviceDetailModel;
+
 class DeviceDetailController extends BaseController
 {
-    public function page1()
+    public function page2()
     {
-        return view('page2');
+        $deviceDetailModel = new DeviceDetailModel();
+        $deviceDetail = $deviceDetailModel->findAll();
+        $data = [
+            'Device_Detail' => $deviceDetail
+        ];
+        return view('page2', $data);
     }
 }

@@ -45,7 +45,7 @@
             <a class="nav-link text-success" href="<?php echo base_url() ?>/page1">Page 1</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-success" href="#">Page 2</a>
+            <a class="nav-link text-success" href="<?php echo base_url() ?>/page2">Page 2</a>
         </li>
     </ul>
 

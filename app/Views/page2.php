@@ -45,7 +45,7 @@ $status3 = 'off';
 <body>
     <ul class="navbar bg-dark justify-content-center ">
         <li class="nav-item">
-            <a class="nav-link text-success" aria-current="page" href="<?php echo base_url() ?>/index">Home</a>
+            <a class="nav-link text-success" aria-current="page" href="<?php echo base_url() ?>/homePage">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-success" href="<?php echo base_url() ?>/page1">Page 1</a>
@@ -58,30 +58,21 @@ $status3 = 'off';
         <thead>
             <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Device Name</th>
-                <th scope="col">Device Brand</th>
-                <th scope="col">Device Quantity</th>
-                <th scope="col">Device Status</th>
+                <th scope="col">Device Id</th>
+                <th scope="col">Device Defect</th>
+                <th scope="col">Device Origin</th>
+
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($Device as $d) : ?>
+            <?php foreach ($Device_Detail as $d) : ?>
                 <tr>
                     <td><?= $d['Id']; ?></td>
-                    <td><?= $d['Device Name']; ?></td>
-                    <td><?= $d['Device Brand']; ?></td>
-                    <td><?= $d['Device Quantity']; ?></td>
-                    <td>
-                        <?= $d['Device Status']; ?>
-                        <form id="s" method="post">
-                            <input type="submit" name="Submit" value="Toggle">
-                        </form>
-
-                    </td>
-
+                    <td><?= $d['Device_id']; ?></td>
+                    <td><?= $d['Device Defect']; ?></td>
+                    <td><?= $d['Device Origin']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
 </body>
